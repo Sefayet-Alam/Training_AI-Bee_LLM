@@ -1,0 +1,242 @@
+Sure! Here's amn detailed example for single, multi level, multiple level, hirarcheal, hybrid inheritance in c++ (without using vector) :
+
+- ### 1. Single Inheritance :
+
+The inheritance in which a single derived class is inherited from a single base class is known as the Single Inheritance.
+
+<code_start>
+#include<iostream>
+
+using namespace std;
+
+class Base {
+public:
+    Base()
+    {
+        cout <<"This is Base Class"<< endl;
+    }
+    
+};
+
+class Derived : public Base {
+    public:
+    Derived()
+    {
+        cout <<"This is Derived Class"<< endl;
+    }
+};
+
+int main() {
+    Derived derivedobj;
+    /*goes to Derived class and then 
+    goes to base class
+    calls base class constructor automatically
+    */
+    return 0;
+}
+<code_end>
+Output:
+This is Base Class
+This is Derived Class
+
+Here inthertance flow : Base class-> Derived Class
+
+- ### 2.Multilevel Inheritance:
+
+Multilevel Inheritance in C++ is the process of deriving a class from another derived class. When one class inherits another class it is further inherited by another class. It is known as multi-level inheritance.
+
+<code_start>
+#include<iostream>
+
+using namespace std;
+
+class Base {
+public:
+    Base(){
+        cout<<"In Base class"<<endl;
+    }
+   
+};
+
+class FirstDerived: public Base {
+public:
+    FirstDerived(){
+        cout<<"In First derived class"<<endl;
+    }
+};
+
+class SecondDerived : public FirstDerived {
+public:
+    SecondDerived(){
+         cout<<"In Second derived class"<<endl;
+    }
+};
+/*Here 2nd Derived class inherits First derived class and first derived class inherits
+base class*/
+
+int main() {
+    SecondDerived obj; //instance of 2nd derived class
+
+    return 0;
+}
+
+<code_end>
+Output:
+In Base class
+In First derived class
+In Second derived class
+
+- ### 3.Multiple Inheritance:
+
+Multiple Inheritance is a feature of C++ where a class can inherit from more than one classes.  The constructors of inherited classes are called in the same order in which they are inherited.
+
+<code_start>
+#include<iostream>
+
+using namespace std;
+
+class FirstBase {
+public:
+   FirstBase() {
+        cout << "Constructor from First Base" << endl;
+    }
+};
+
+class SecondBase{
+public:
+    SecondBase() {
+        cout << "Constructor from Second Base." << endl;
+    }
+};
+
+class Derived : public FirstBase, public SecondBase {
+public:
+    Derived(){
+        cout << "Constructor from Derived class." << endl;
+    }
+};
+/*
+Hierarchy:
+FirstBase   SecondBase
+    ^        ^ 
+    |        |
+     Derived
+*/
+int main() {
+    Derived obf;
+    return 0;
+}
+<code_end>
+Output:
+Constructor from First Base
+Constructor from Second Base.
+Constructor from Derived class.
+
+-### 4.Hierarchical Inheritance:
+
+In Hierarchical inheritance, more than one sub-class inherits the property of a single base class. There is one base class and multiple derived classes. Several other classes inherit the derived classes as well. Hierarchical structures thus form a tree-like structure.  
+<code_start>
+#include<iostream>
+
+using namespace std;
+
+class Base {
+public:
+    Base(){
+        cout << "Constructor from Base" << endl;
+    }
+};
+
+class FirstDerived : public Base {
+public:
+    FirstDerived(){
+        cout << "Constructor from First Derived" << endl;
+    }
+};
+
+class SecondDerived : public Base {
+    public:
+    SecondDerived(){
+        cout << "Constructor from Second Derived" << endl;
+    }
+};
+
+/*
+Hierarchy:
+    .....Base.....
+    ^           ^ 
+    |           |
+FirstDerived   SeconDerived
+*/
+int main() {
+    FirstDerived fobj;
+    SecondDerived sobj;
+    
+    return 0;
+}
+<code_end>
+Output:
+Constructor from Base
+Constructor from First Derived
+Constructor from Base
+Constructor from Second Derived
+
+- ### 5.Hybrid Inheritance (Combination of Multiple and Hierarchical Inheritance):
+
+The process of combining more than one type of Inheritance together while deriving subclasses in a program is called a Hybrid Inheritance.
+
+<code_start>
+#include<iostream>
+
+using namespace std;
+
+class Base {
+public:
+    Base(){
+        cout << "Constructor from base class" << endl;
+    }
+};
+
+class FirstDerived : public Base {
+  public:
+    FirstDerived(){
+        cout << "Constructor from first derived class" << endl;
+    }
+};
+
+class SecondDerived : public Base {
+    public:
+    SecondDerived(){
+         cout << "Constructor from Second derived class" << endl;
+    }
+};
+
+class ThirdDerived : public FirstDerived, public SecondDerived {
+    public:
+    ThirdDerived(){
+         cout << "Constructor from third derived class" << endl;
+    }
+};
+
+int main() {
+   ThirdDerived obj;
+    return 0;
+}
+/*
+Hierarchy:
+    .....Base.....
+    ^           ^ 
+    |           |
+FirstDerived   SeconDerived
+    ^           ^
+    |           |
+    ThirdDerived
+*/
+
+<code_end>
+Output:
+Constructor from base class
+Constructor from first derived class
+Constructor from base class
+Constructor from Second derived class
+Constructor from third derived class

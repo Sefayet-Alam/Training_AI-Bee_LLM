@@ -1,0 +1,101 @@
+Sure! Here's an detailed syllabus with proper instructions:
+
+# Syllabus  :
+### Chapter 1:  Introduction to Pine Script 
+
+* Overview of Pine Script and its use-cases
+* Setting up account and basic setups
+
+### Chapter 2:  Basic structure and syntax of Pine Script
+
+* Basic Syntax
+* Variables and Data Types (integer, float, 
+  bool, etc.)
+* Variables and their scopes
+* operators and expressions
+
+### Chapter 3 :  Plotting Data
+
+* Introduction to time-series
+* Introduction to price-series
+* Using plot() function to display data on the chart and customizing plot appearance (color, style, etc.)
+
+### Chapter 4: Conditional Statements
+
+* Use of if-else statements for decision-making.
+* Implementation of multiple conditions with if-else if-else.
+
+### Chapter 5: Loops and Iterations
+
+* Loops,loop structures and while loops
+* Implementation of iterative processes
+
+### Chapter 6: Functions
+
+* Custom functions and basic syntax of a function.
+* Functions to modularize your code.
+
+### Chapter 7: Strategy Development
+
+* Introduction to strategy() function.
+* Defining entry and exit conditions.
+* Managing position sizing and risk.
+
+### Chapter 8: Indicators:
+
+* Custom Indicators.
+* Different types of moving averages, oscillators, etc.
+
+### Chapter 9: Backtesting and Optimization
+
+* Using historical data to test strategies.
+* Optimization of strategy parameters for better performance.
+
+### Chapter 10: Alerts and Notifications
+
+* Setting up alerts for trading signals.
+* Sending notifications to email or other platforms.
+
+### Chapter 11: Advanced Techniques
+
+* Understanding and using advanced features
+* Handling repainting and lookahead bias
+* Using security() function for multiple symbols
+
+### Chapter 12: Debugging and Error Handling
+
+* Understanding errors in Pine Script
+Debugging your code
+* Handling errors
+
+### Chapter 13: Project
+* Real world implementation
+* Review and feedback of the project
+
+## Resources:
+-  Website link:  
+https://www.tradingview.com/pine-script-docs/en/v5/primer/index.html
+
+- Youtube course:
+1. https://www.youtube.com/playlist?list=PLM0BBafRCnRNhvMxyiqScZWV_h41raut6
+2. https://www.youtube.com/playlist?list=PLSP_1DBafH-ES8Fw_noPA8d3dNxScysjc
+
+
+## Step-by_step Guide:
+
+- Familiarize yourself with the platform and features
+- Review the official Pine Script documentation on the TradingView website. 3.Understand the basic structure of a Pine Script code and its essential functions.
+- Practice basic variable assignments and data plotting .
+- Experiment with different styles and colors.
+- Learn about conditional statements (if, else if, else) and 
+- practice implementing simple decision-making logic.
+- Study loops and iterations (for, while) and create repetitive tasks using them.
+- Dive into functions and understand how they can help organize and simplify your code.
+- Begin exploring trading strategies by using the strategy() function. Implement basic entry and exit conditions.
+- Study the available built-in indicators and create your custom indicators.
+- Learn how to backtest your strategies using historical data and optimize their parameters for better results.
+- Explore how to set up alerts and notifications to get real-time signals.
+- Challenge yourself with more advanced techniques like handling repainting and using the security() function.
+- Keep practicing and experimenting with various ideas. Join TradingView communities and forums to learn from others and ask for help when needed.
+
+#### Remember, learning a programming language takes time and practice. Start with small projects and gradually build up your skills. Analyze existing Pine Script codes and try to understand how they work. Don't be discouraged by initial difficulties; coding proficiency comes with persistence and dedication
